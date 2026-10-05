@@ -28,6 +28,19 @@ import math  # noqa: F401
 #    print(f"Net USD: ${net_usd:.2f}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 1 below:
+#1. Prompt user
+euros = float(input("Enter amount in EUR: "))
+rate = float(input("Enter exchange rate (EUR to USD): "))
+# 2. Calculate
+gross_usd = euros * rate
+fee = gross_usd * 0.02
+net_usd = gross_usd - fee
+# 3. Print
+print(f"Gross USD: ${gross_usd:.2f}")
+print(f"Fee: ${fee:.2f}")
+print(f"Net USD: ${net_usd:.2f}")
+
+
 
 
 # ------------------------------------------------------------------------------
@@ -51,6 +64,19 @@ import math  # noqa: F401
 #    print(f"Leftover slices: {leftover_slices}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 2 below:
+# 1. Prompt user
+students = int(input("Enter number of students: "))
+pizzas = int(input("Enter number of pizzas: "))
+Slices_per_pizza = int(input("Enter slices per pizza: "))
+# 2. Calculate
+total_slices = pizzas * Slices_per_pizza
+slices_per_student = total_slices // students
+leftover_slices = total_slices % students
+# 3. Print
+print(f"Total slices: {total_slices}")
+print(f"Slices per student: {slices_per_student}")
+print(f"Leftover slices: {leftover_slices}")
+
 
 
 # ------------------------------------------------------------------------------
@@ -68,6 +94,14 @@ import math  # noqa: F401
 #    print(f"Sphere Surface Area: {surface_area:.2f}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 3 below:
+# 1. Prompt user
+radius = float(input("Enter sphere radius: "))
+# 2. Calculate
+volume = (4 / 3) * math.pi * (radius ** 3)
+surface_area = 4 * math.pi * (radius ** 2)
+# 3. Print
+print(f"Sphere Volume: {volume:.2f}")
+print(f"Sphere Surface Area: {surface_area:.2f}")
 
 
 # ------------------------------------------------------------------------------
@@ -87,6 +121,14 @@ import math  # noqa: F401
 #    print(cup_a, cup_b, cup_c, sep=" -> ")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 4 below:
+# 1. Prompt user
+cup_a = input("Enter item in Cup A: ").strip()
+cup_b = input("Enter item in Cup B: ").strip()
+cup_c = input("Enter item in Cup C: ").strip()
+# 2. Perform the circular rotation in ONE assignment statement
+cup_a, cup_b, cup_c = cup_c, cup_a, cup_b
+# 3. Print the rotated cups separated by ' -> ' using sep
+print(cup_a, cup_b, cup_c, sep=" -> ")
 
 
 # ------------------------------------------------------------------------------
@@ -113,5 +155,25 @@ import math  # noqa: F401
 #    print(border)
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 5 below:
+# 1. Prompt user
+name = input("Enter attendee name: ").strip()
+dept = input("Enter department: ").strip()
+role = input("Enter role: ").strip()
+# 2. Transform the text
+name = name.title()
+dept = dept.upper()
+role = role.title()
+# 3. Print the badge decorated with a 32-character border of '#' characters
+border = "#" * 32
+print(border) 
+print(f"NAME: {name}")
+print(f"DEPT: {dept}")
+print(f"ROLE: {role}")
+print(f"NAME LENGTH: {len(name)}")
+print(border)
+
+
+
+
 
 
